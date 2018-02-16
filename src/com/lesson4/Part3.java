@@ -5,8 +5,6 @@ package com.lesson4;
  * Для преобразования из String в double используйте метод Double.parseDouble(String s).
  */
 
-import java.util.Scanner;
-
 public class Part3 {
     public static void main(String[] args) {
         double i = Double.parseDouble(args[0]);
