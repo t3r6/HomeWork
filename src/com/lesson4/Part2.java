@@ -12,19 +12,19 @@ package com.lesson4;
 
 public class Part2 {
     public static void main(String[] args) {
-        Invert();
-        Blinking();
-        Condition();
+        invert();
+        blinking();
+        condition();
     }
 
-    private static void Invert() {
+    private static void invert() {
         for (int i = 0; i < 5; i++) {
             int a = ~i;
             System.out.println("Состояние инвертированной гирлянды: " + Integer.toBinaryString(a));
         }
     }
 
-    private static void Condition() {
+    private static void condition() {
         int i = 5;
         int mask = 1;
         int c = i & mask;
@@ -32,7 +32,7 @@ public class Part2 {
         System.out.println("Текущее состояние гирлянды: " + Integer.toBinaryString(i));
     }
 
-    private static void Blinking() {
+    private static void blinking() {
         for (int i = 0; i < 5; i++) {
             int b = i << 1;
             System.out.println("Мигающая гирлянда: " + Integer.toBinaryString(b));

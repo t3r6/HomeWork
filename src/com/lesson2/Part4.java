@@ -15,58 +15,58 @@ package com.lesson2;
 
 public class Part4 {
     public static void main(String[] args) {
-        Logic();
-        String();
-        Char();
-        Int2();
-        Int8();
-        Int10();
-        Int16();
-        Float();
-        Double();
+        logic1();
+        string1();
+        char1();
+        int2();
+        int8();
+        int10();
+        int16();
+        float1();
+        double1();
     }
 
-    public static void Logic() {
+    private static void logic1() {
         boolean x = true;
         System.out.println(x);
     }
 
-    public static void String() {
+    private static void string1() {
         String a = "Hello";
         System.out.println(a);
     }
 
-    public static void Char() {
+    private static void char1() {
         char b = 't';
         System.out.println(b);
     }
 
-    public static void Int2() {
+    private static void int2() {
         int c = 0b101;
         System.out.println(c);
     }
 
-    public static void Int8() {
+    private static void int8() {
         int d = 010;
         System.out.println(d);
     }
 
-    public static void Int10() {
+    private static void int10() {
         int e = 878;
         System.out.println(e);
     }
 
-    public static void Int16() {
+    private static void int16() {
         int f = 0x7ddfffff;
         System.out.println(f);
     }
 
-    public static void Float() {
+    private static void float1() {
         float g = 4.56f;
         System.out.println(g);
     }
 
-    public static void Double() {
+    private static void double1() {
         double h = 4.56;
         System.out.println(h);
     }

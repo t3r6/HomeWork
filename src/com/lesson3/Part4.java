@@ -11,12 +11,23 @@ public class Part4 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите 2 числа (после ввода каждого нажмите Enter): ");
+        System.out.println("Сумма a + b = " + sum(sc));
+    }
+
+    private static int check(Scanner sc) {
         if (sc.hasNextInt()) {
-            int a = sc.nextInt();
-            int b = sc.nextInt();
-            System.out.println("Сумма a + b = " + (a + b));
+            return sc.nextInt();
         } else {
             System.out.println("Вы ввели не целое число");
+            System.exit(0);
+            return 0;
         }
     }
+
+    private static int sum(Scanner sc) {
+        int a = check(sc);
+        int b = check(sc);
+        return a + b;
+    }
 }
+
