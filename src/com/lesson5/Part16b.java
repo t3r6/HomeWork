@@ -8,27 +8,19 @@ package com.lesson5;
  * (внутренний цикл for должен перебирать элементы не с конца, а с начала).
  */
 
-public class Part16 {
+public class Part16b {
     public static void sort(int[] array) {
-            for (int i = 0; i < array.length; i++) {
-                first:
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array.length - i - 1; j++) {
                 {
-                /*for (int j = array.length - 1; j > i; j--) {*/
-                    for (int j = 0; j < i; j++) {
-                        {
-                            if (array[j - 1] > array[j]) {
-                                int tmp = array[j - 1];
-                                array[j - 1] = array[j];
-                                array[j] = tmp;
-
-                            /*int tmp = array[j];
-                            array[j] = array[j - 1];
-                            array[j - 1] = tmp;*/
-                                break first;
-                            }
-                        }
+                    if (array[j] < array[j + 1]) {
+                        int tmp = array[j];
+                        array[j] = array[j + 1];
+                        array[j + 1] = tmp;
                     }
                 }
             }
         }
     }
+}
+

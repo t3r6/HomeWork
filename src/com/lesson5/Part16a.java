@@ -1,7 +1,5 @@
 package com.lesson5;
 
-import java.util.Arrays;
-
 /**
  * Изменить программу сортировки пузырьком:
  * а) добавить возможность досрочного окончания сортировки;
@@ -10,16 +8,23 @@ import java.util.Arrays;
  * (внутренний цикл for должен перебирать элементы не с конца, а с начала).
  */
 
-public class Part16Test {
-    public static void main(String[] args) {
-        int[][] data = {
-                {0, 3, 2, 1, 4},
-                //  {0, 2, 5, 3, 4},
-        };
-        for (int[] arr : data) {
-            System.out.print(Arrays.toString(arr) + " => ");
-            Part16.sort(arr);
-            System.out.println(Arrays.toString(arr));
+public class Part16a {
+    public static void sort(int[] array) {
+        first:
+        {
+            for (int i = 0; i < array.length; i++) {
+                if (i >= 1) {
+                    break first;
+                } else {
+                    for (int j = array.length - 1; j > i; j--) {
+                        if (array[j - 1] > array[j]) {
+                            int tmp = array[j - 1];
+                            array[j - 1] = array[j];
+                            array[j] = tmp;
+                        }
+                    }
+                }
+            }
         }
     }
 }
