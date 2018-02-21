@@ -14,7 +14,7 @@ public class Part16bTest {
     public static void main(String[] args) {
         int[][] data = {
                 {0, 3, 2, 1, 4},
-                //  {0, 2, 5, 3, 4},
+                {0, 2, 5, 3, 4},
         };
         for (int[] arr : data) {
             System.out.print(Arrays.toString(arr) + " => ");
