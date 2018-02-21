@@ -4,49 +4,48 @@ import java.util.Arrays;
 
 public class Everything {
     public static void main(String[] args) {
-        int[][] array = {
-                {1, 2, 3, 4, 5, 6, 7, 8},
-                {11, 12, 13, 14, 15, 16, 17, 18},
-                {21, 22, 23, 24, 25, 26, 27, 28},
-                {31, 32, 33, 34, 35, 36, 37, 38},
-                {41, 42, 43, 44, 45, 46, 47, 48},
-        };
-        int[][] newArray = new int[5][2];
+        int[] garland = new int[32];
+        for (int i = 0; i < garland.length; i++) {
+            if (i % 2 == 0) {
+                garland[i] = 0;
+            } else {
+                garland[i] = 1;
+            }
+        }
 
-        min(array, newArray);
-        max(array, newArray);
-
-        System.out.println(Arrays.deepToString(array));
-        System.out.println(Arrays.deepToString(newArray));
+        currentState(garland);
+        ticker(garland);
+        blinking(garland);
+        checkTheFirst(garland[0]);
     }
 
-    public static void min(int[][] a, int[][] newArray) {
-
-        for (int i = 0; i < a.length; i++) {
-            int min = a[i][0];
-            for (int j : a[i]) {
-                if (j < min) {
-                    min = j;
-                }
-            }
-            System.out.println(min);
-            newArray[i][0] = min;
+    private static void checkTheFirst(int i) {
+        if (i == 1) {
+            System.out.println("Bulb is on");
+        } else {
+            System.out.println("Bulb is off");
         }
     }
 
-    public static void max(int[][] a, int[][] newArray) {
-
-        for (int i = 0; i < a.length; i++) {
-            int max = a[i][0];
-            for (int j : a[i]) {
-                if (j > max) {
-                    max = j;
-                }
+    private static void blinking(int[] garland) {
+        for (int j = 0; j < garland.length; j++) {
+            if (garland[j] == 1) {
+                garland[j] = 0;
+            } else {
+                garland[j] = 1;
             }
-            System.out.println(max);
-            newArray[i][1] = max;
+        }
+        currentState(garland);
+    }
+
+    private static void ticker(int[] garland) {
+        for (int i = 0; i < 53; i++) {
+            System.arraycopy(garland, 0, garland, 1, garland.length - 1);
+            currentState(garland);
         }
     }
 
+    private static void currentState(int[] garland) {
+        System.out.println(Arrays.toString(garland));
+    }
 }
-
