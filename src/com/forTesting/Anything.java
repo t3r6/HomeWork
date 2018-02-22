@@ -2,7 +2,7 @@ package com.forTesting;
 
 import java.util.Arrays;
 
-public class Everything {
+public class Anything {
     public static void main(String[] args) {
         int[] garland = new int[32];
         for (int i = 0; i < garland.length; i++) {
