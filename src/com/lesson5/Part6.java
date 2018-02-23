@@ -8,7 +8,10 @@ public class Part6 {
     public static void main(String[] args) {
         int i = 1;
         do {
-            System.out.println(i++);
-        } while (i <= 100 && i % 5 == 0);
+            i++;
+            if(i % 5 == 0){
+            System.out.println(i);
+            }
+        } while (i <= 100 );
     }
 }
