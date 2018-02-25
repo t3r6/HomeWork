@@ -20,6 +20,30 @@ package com.lesson6;
  * Метод выводит на консоль номера этих телефонов.
  */
 
-public class Part1 {
+public class Phone {
+    String number /*= "+380507789456"*/;
+    String model /*= "Samsung"*/;
+    double weight /*= 40*/;
 
+    Phone(String n, String w, double s) {
+        number = n;
+        model = w;
+        weight = s;
+    }
+
+    Phone(String n, String w){
+        number = n;
+        model = w;
+    }
+
+    Phone(){
+    }
+
+    void receiveCall(String name) {
+        System.out.println("Звонит " + name);
+    }
+
+    String getNumber() {
+        return number;
+    }
 }
