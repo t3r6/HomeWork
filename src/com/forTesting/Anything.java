@@ -3,49 +3,42 @@ package com.forTesting;
 import java.util.Arrays;
 
 public class Anything {
-    public static void main(String[] args) {
-        int[] garland = new int[32];
-        for (int i = 0; i < garland.length; i++) {
-            if (i % 2 == 0) {
-                garland[i] = 0;
-            } else {
-                garland[i] = 1;
+        public static int N = 5;    // Размер матрицы
+
+        public static void main(String [] args) {
+
+            int [][] A = new int [N][N];
+            int [][] B = new int [N][N];
+            int [][] C = new int [N][N];
+
+            // Заполнение и печать на экран матрицы A
+            System.out.println(" Матрица A:");
+            for(int i = 0; i < A.length; i++) {
+                for(int j = 0; j < A[i].length; j++) {
+                    A[i][j] = (int) (Math.random() * 20 + 1);
+                    System.out.print(" " + A[i][j]);
+                }
+                System.out.println();
+            }
+
+            // Заполнение и печать на экран матрицы B
+            System.out.println("\n Матрица B:");
+            for(int i = 0; i < B.length; i++) {
+                for(int j = 0; j < B[i].length; j++) {
+                    B[i][j] = (int) (Math.random() * 20 + 1);
+                    System.out.print(" " + B[i][j]);
+                }
+                System.out.println();
+            }
+
+            // Сумма матриц
+            System.out.println("\n Сумма матриц A и B:");
+            for(int i = 0; i < C.length; i++) {
+                for(int j = 0; j < C[i].length; j++) {
+                    C[i][j] = A[i][j] + B[i][j];
+                    System.out.print(" " + C[i][j]);
+                }
+                System.out.println();
             }
         }
-
-        currentState(garland);
-        ticker(garland);
-        blinking(garland);
-        checkTheFirst(garland[0]);
     }
-
-    private static void checkTheFirst(int i) {
-        if (i == 1) {
-            System.out.println("Bulb is on");
-        } else {
-            System.out.println("Bulb is off");
-        }
-    }
-
-    private static void blinking(int[] garland) {
-        for (int j = 0; j < garland.length; j++) {
-            if (garland[j] == 1) {
-                garland[j] = 0;
-            } else {
-                garland[j] = 1;
-            }
-        }
-        currentState(garland);
-    }
-
-    private static void ticker(int[] garland) {
-        for (int i = 0; i < 53; i++) {
-            System.arraycopy(garland, 0, garland, 1, garland.length - 1);
-            currentState(garland);
-        }
-    }
-
-    private static void currentState(int[] garland) {
-        System.out.println(Arrays.toString(garland));
-    }
-}
