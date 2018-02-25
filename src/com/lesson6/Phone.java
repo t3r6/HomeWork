@@ -26,24 +26,37 @@ public class Phone {
     double weight /*= 40*/;
 
     Phone(String n, String w, double s) {
-        number = n;
-        model = w;
+        this(n, w);
+       /* number = n;
+        model = w;*/
         weight = s;
     }
 
-    Phone(String n, String w){
+    Phone(String n, String w) {
         number = n;
         model = w;
     }
 
-    Phone(){
+    Phone() {
     }
 
     void receiveCall(String name) {
         System.out.println("Звонит " + name);
     }
 
+    void receiveCall(String name, String number) {
+        System.out.println("Звонит " + name + " с номером телефона " + number);
+    }
+
     String getNumber() {
         return number;
     }
+
+    void sendMessage(String... array) {
+        for (String a : array) {
+            System.out.print(a + " ");
+        }
+        System.out.println();
+    }
 }
+

@@ -10,11 +10,18 @@ public class PhoneDemo {
         System.out.println("Номер: " + phone2.number + " модель " + phone2.model + " вес " + phone2.weight);
         System.out.println("Номер: " + phone3.number + " модель " + phone3.model + " вес " + phone3.weight);
         System.out.println();
+        phone1.receiveCall("Мама", "+380668542168");
         phone1.receiveCall("Мама");
         System.out.println(phone1.getNumber());
-        phone1.receiveCall("Андрей");
+        phone2.receiveCall("Андрей", "+380985214863");
+        phone2.receiveCall("Андрей");
         System.out.println(phone2.getNumber());
-        phone1.receiveCall("Анастасия");
+        phone3.receiveCall("Анастасия", "+380996523418");
+        phone3.receiveCall("Анастасия");
         System.out.println(phone3.getNumber());
+
+        phone1.sendMessage(new String[]{});
+        phone2.sendMessage(new String[]{"+380986523468"});
+        phone3.sendMessage(new String[]{"+380936523424","+380475843621","+380669852147"});
     }
 }
