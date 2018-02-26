@@ -1,4 +1,4 @@
-package com.lesson6;
+package com.lesson7;
 
 /**
  * Класс Phone. (Задание с урока)
@@ -20,28 +20,43 @@ package com.lesson6;
  * Метод выводит на консоль номера этих телефонов.
  */
 
-public class PhoneDemo {
-    public static void main(String[] args) {
-        Phone phone1 = new Phone("+380677596281", "Lenovo", 30);
-        Phone phone2 = new Phone("+380957593132", "Motorolla", 25);
-        Phone phone3 = new Phone("+380634398439", "Nokia", 35);
+public class Phone {
+    String number /*= "+380507789456"*/;
+    String model /*= "Samsung"*/;
+    double weight /*= 40*/;
 
-        System.out.println("Номер: " + phone1.number + " модель " + phone1.model + " вес " + phone1.weight);
-        System.out.println("Номер: " + phone2.number + " модель " + phone2.model + " вес " + phone2.weight);
-        System.out.println("Номер: " + phone3.number + " модель " + phone3.model + " вес " + phone3.weight);
+    Phone(String n, String w, double s) {
+        this(n, w);
+       /* number = n;
+        model = w;*/
+        weight = s;
+    }
+
+    Phone(String n, String w) {
+        number = n;
+        model = w;
+    }
+
+    Phone() {
+    }
+
+    void receiveCall(String name) {
+        System.out.println("Звонит " + name);
+    }
+
+    void receiveCall(String name, String number) {
+        System.out.println("Звонит " + name + " с номером телефона " + number);
+    }
+
+    String getNumber() {
+        return number;
+    }
+
+    void sendMessage(String... array) {
+        for (String a : array) {
+            System.out.print(a + " ");
+        }
         System.out.println();
-        phone1.receiveCall("Мама", "+380668542168");
-        phone1.receiveCall("Мама");
-        System.out.println(phone1.getNumber());
-        phone2.receiveCall("Андрей", "+380985214863");
-        phone2.receiveCall("Андрей");
-        System.out.println(phone2.getNumber());
-        phone3.receiveCall("Анастасия", "+380996523418");
-        phone3.receiveCall("Анастасия");
-        System.out.println(phone3.getNumber());
-
-        phone1.sendMessage(new String[]{});
-        phone2.sendMessage(new String[]{"+380986523468"});
-        phone3.sendMessage(new String[]{"+380936523424","+380475843621","+380669852147"});
     }
 }
+

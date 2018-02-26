@@ -1,4 +1,4 @@
-package com.lesson6;
+package com.lesson7;
 
 /**
  * Определить класс Reader, хранящий такую информацию о пользователе библиотеки:

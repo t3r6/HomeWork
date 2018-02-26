@@ -1,4 +1,4 @@
-package com.lesson6;
+package com.lesson7;
 
 /**
  * Определить класс Reader, хранящий такую информацию о пользователе библиотеки:
@@ -17,27 +17,26 @@ package com.lesson6;
  * Или  "Петров В. В. вернул 3 книги".
  */
 
-public class Book {
-    private String name, writer;
+public class ReaderDemo {
+    public static void main(String[] args) {
+        Reader reader1 = new Reader();
+        Reader reader2 = new Reader("Петров В. В.", 5, "технологический",
+                "07 февраля 1986", "+380502419568");
+        Reader reader3 = new Reader("Васильев А.К.", 8, "физико-математический",
+                "15 марта 1989", "+380980532130");
+        Reader[] array = {reader1, reader2, reader3};
 
-    public Book(String name, String writer) {
-        this.name = name;
-        this.writer = writer;
-    }
+        Book example1 = new Book("Naked Lunch", "William S. Burroughs");
+        Book example2 = new Book("An American Tragedy", "Theodore Dreiser");
+        Book example3 = new Book("The Dweller in the Gulf", "Clark Ashton Smith");
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getWriter() {
-        return writer;
-    }
-
-    public void setWriter(String writer) {
-        this.writer = writer;
+        reader2.takeBook();
+        reader2.takeBook("Приключения", "Словарь", "Энциклопедия");
+        reader3.takeBook("Ten Little Indians", "Harry Potter and the Philosopher's Stone");
+        reader3.takeBook(example1, example2);
+        reader2.returnBook();
+        reader2.returnBook("Приключения", "Словарь", "Энциклопедия");
+        reader3.returnBook("Ten Little Indians", "Harry Potter and the Philosopher's Stone");
+        reader3.returnBook(example1, example2);
     }
 }

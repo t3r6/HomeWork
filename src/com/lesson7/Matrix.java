@@ -1,6 +1,4 @@
-package com.lesson6;
-
-import java.util.Arrays;
+package com.lesson7;
 
 /**
  * Создать класс "Матрица". Класс должен иметь следующие поля:
