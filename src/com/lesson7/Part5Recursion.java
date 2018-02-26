@@ -9,34 +9,33 @@ import java.util.Random;
  * Использовать рекурсию.
  */
 
-/*
 public class Part5Recursion {
     public static void main(String[] args) {
-       */
-/* int a = 1;
-        int b = 10;*//*
+        functionOne(1, 10);
+        System.out.println();
+        functionOne(10, 1);
+    }
 
-        void functionOne(int a, int b){
-            if (a > b) {
-                void inRecursionAndReversed(a, b);
-            } else {
-                void inRecursion(a, b);
-            }
+    private static void functionOne(int a, int b) {
+        if (a > b) {
+            inRecursionAndReversed(a, b);
+        } else {
+            inRecursion(a, b);
         }
+    }
 
-        void inRecursion ( int c, int limit){
-            System.out.println(c);
-            if (c < limit) {
-                void inRecursion(c + 1, limit);
-            }
+    private static void inRecursion(int c, int limit) {
+        System.out.print(c + " ");
+        if (c < limit) {
+            inRecursion (c + 1, limit);
         }
+    }
 
-        void inRecursionAndReversed ( int c, int limit){
-            System.out.println(c);
-            if (c > limit) {
-                void inRecursionAndReversed(c - 1, limit);
-            }
+    private static void inRecursionAndReversed(int c, int limit) {
+        System.out.print(c + " ");
+        if (c > limit) {
+            inRecursionAndReversed (c - 1, limit);
         }
     }
 }
-*/
+
