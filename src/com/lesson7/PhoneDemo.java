@@ -20,15 +20,26 @@ package com.lesson7;
  * Метод выводит на консоль номера этих телефонов.
  */
 
+/**
+ * Доделать класс Phone. (Задание с урока)
+ * и) Изменить класс Phone в соответствии с концепцией JavaBean.
+ * к) Реализовать подсчет количества существующих телефонов с помощью статической переменной.
+ */
+
 public class PhoneDemo {
     public static void main(String[] args) {
         Phone phone1 = new Phone("+380677596281", "Lenovo", 30);
         Phone phone2 = new Phone("+380957593132", "Motorolla", 25);
         Phone phone3 = new Phone("+380634398439", "Nokia", 35);
 
-        System.out.println("Номер: " + phone1.number + " модель " + phone1.model + " вес " + phone1.weight);
+        System.out.println(Phone.getCount());
+
+        /*System.out.println("Номер: " + phone1.number + " модель " + phone1.model + " вес " + phone1.weight);
         System.out.println("Номер: " + phone2.number + " модель " + phone2.model + " вес " + phone2.weight);
-        System.out.println("Номер: " + phone3.number + " модель " + phone3.model + " вес " + phone3.weight);
+        System.out.println("Номер: " + phone3.number + " модель " + phone3.model + " вес " + phone3.weight);*/
+        System.out.println("Номер: " + phone1.getNumber() + " модель " + phone1.getModel() + " вес " + phone1.getWeight());
+        System.out.println("Номер: " + phone2.getNumber() + " модель " + phone2.getModel() + " вес " + phone2.getWeight());
+        System.out.println("Номер: " + phone3.getNumber() + " модель " + phone3.getModel() + " вес " + phone3.getWeight());
         System.out.println();
         phone1.receiveCall("Мама", "+380668542168");
         phone1.receiveCall("Мама");
@@ -42,6 +53,6 @@ public class PhoneDemo {
 
         phone1.sendMessage(new String[]{});
         phone2.sendMessage(new String[]{"+380986523468"});
-        phone3.sendMessage(new String[]{"+380936523424","+380475843621","+380669852147"});
+        phone3.sendMessage(new String[]{"+380936523424", "+380475843621", "+380669852147"});
     }
 }
