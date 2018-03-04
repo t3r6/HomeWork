@@ -14,4 +14,53 @@ package com.lesson8.part2;
  */
 
 public class Student {
+    private String firstName, lastName, group;
+    private double avrMark;
+
+    public Student(String firstName, String lastName, String group, double avrMark) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.group = group;
+        this.avrMark = avrMark;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getGroup() {
+        return group;
+    }
+
+    public double getAvrMark() {
+        return avrMark;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setGroup(String group) {
+        this.group = group;
+    }
+
+    public void setAvrMark(double avrMark) {
+        this.avrMark = avrMark;
+    }
+
+    public int getScholarship() {
+        if (avrMark == 5) {
+            return 100;
+        } else {
+            return 80;
+        }
+    }
 }

@@ -13,5 +13,27 @@ package com.lesson8.part2;
  * Вызвать метод getScholarship() для каждого элемента массива.  (Задание с урока)
  */
 
-public class Aspirant {
+public class Aspirant extends Student {
+    private String scienceWork;
+
+    public Aspirant(String firstName, String lastName, String group, double avrMark, String scienceWork) {
+        super(firstName, lastName, group, avrMark);
+        this.scienceWork = scienceWork;
+    }
+
+    public void setScienceWork(String scienceWork) {
+        this.scienceWork = scienceWork;
+    }
+
+    public String getScienceWork() {
+        return scienceWork;
+    }
+
+    public int getScholarship() {
+        if (getAvrMark() == 5) {
+            return 200;
+        } else {
+            return 180;
+        }
+    }
 }
