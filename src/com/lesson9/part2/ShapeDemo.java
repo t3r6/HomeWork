@@ -18,5 +18,6 @@ public class ShapeDemo {
         for (Shape a : figures) {
             a.draw();
         }
+        System.out.println(circle.equals(rectangle));
     }
 }
