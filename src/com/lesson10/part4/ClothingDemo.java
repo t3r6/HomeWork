@@ -19,6 +19,43 @@ package com.lesson10.part4;
  * То же самое для метода одетьМужчину.
  */
 
-public interface WomensClothing {
-    void dressWoman();
+public class ClothingDemo {
+    public static void main(String[] args) {
+        Clothing clothing = Clothing.M;
+        System.out.println("Мой размер: " + clothing);
+        print(clothing);
+        print(Clothing.XXS);
+        System.out.println();
+        print();
+    }
+
+    public static void print(Clothing clothing) {
+        switch (clothing) {
+            case XXS:
+                System.out.println(32);
+                break;
+            case XS:
+                System.out.println(34);
+                break;
+            case S:
+                System.out.println(36);
+                break;
+            case M:
+                System.out.println(38);
+                break;
+            case L:
+                System.out.println(40);
+                break;
+            default:
+                System.out.println("Error");
+        }
+    }
+
+    public static void print() {
+        Clothing[] clothing = Clothing.values();
+        for (Clothing c : clothing) {
+            System.out.println(c + " is " + c.getEuroSize()
+                    + " Description: " + c.getDescription());
+        }
+    }
 }
