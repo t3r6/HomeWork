@@ -24,8 +24,8 @@ import java.util.Objects;
 public class Pants extends Clothes implements MensClothing, WomensClothing {
     private double legLength;
 
-    public Pants(int clothingSize, double price, String color, double legLength) {
-        super(clothingSize, price, color);
+    public Pants(Clothing size, double price, String color, double legLength) {
+        super(size, price, color);
         this.legLength = legLength;
     }
 

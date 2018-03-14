@@ -24,8 +24,8 @@ import java.util.Objects;
 public class Skirt extends Clothes implements WomensClothing {
     private double skirtLength;
 
-    public Skirt(int clothingSize, double price, String color, double skirtLength) {
-        super(clothingSize, price, color);
+    public Skirt(Clothing size, double price, String color, double skirtLength) {
+        super(size, price, color);
         this.skirtLength = skirtLength;
     }
 

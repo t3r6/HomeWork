@@ -1,4 +1,4 @@
-package com.lesson07;
+package com.forTesting;
 
 /**
  * Создать класс "Матрица". Класс должен иметь следующие поля:
@@ -12,31 +12,43 @@ package com.lesson07;
  * 4) умножение матриц - по желанию.
  */
 
-public class Matrix {
- /*   private int row, col;
-    private int [][]array;
-
-    public Matrix(int[][] array) {
-        this.row = array.length;
-        this.col = array[0].length;
-        this.array = array;
-    }*/
-
+public class MatrixVersion1 {
     public static void main(String[] args) {
-        int a = 4;  //a < b must be always
-        int b = 5;
+        int a = 3;
+        int b = 3;
+        int c = 4;
         int n = (int) (Math.random() * 5 + 2);
-        int[][] matrix1 = new int[a][b];
-        int[][] matrix2 = new int[b][b];
+        int[][] matrix1 = new int[a][];
+        int[][] matrix2 = new int[b][];
         int[][] matrix3 = new int[a][b];
-        int[][] matrix4 = new int[a][b];
+        int[][] matrix4 = new int[a][];
+
+       /* MatrixVersion1 matrix2 = new MatrixVersion1(5, 5);  // Почему не работает конструктор?
+        MatrixVersion1 matrix3 = new MatrixVersion1(5, 5);*/
+
+        for (int i = 0; i < matrix4.length; i++) matrix4[i] = new int[c];
 
         System.out.println("Matrix");
-        initialize(matrix1);
+        for (int i = 0; i < matrix1.length; i++) {
+            matrix1[i] = new int[b];
+            for (int j = 0; j < matrix1[i].length; j++) {
+                matrix1[i][j] = (int) (Math.random() * 10);
+                printMatrix1(matrix1[i][j]);
+            }
+            System.out.println();
+        }
+
         System.out.println();
 
         System.out.println("Matrix2");
-        initialize(matrix2);
+        for (int i = 0; i < matrix2.length; i++) {
+            matrix2[i] = new int[c];
+            for (int j = 0; j < matrix2[i].length; j++) {
+                matrix2[i][j] = (int) (Math.random() * 10);
+                printMatrix2(matrix2[i][j]);
+            }
+            System.out.println();
+        }
         System.out.println();
 
         multiplication(matrix1, matrix2, matrix4);
@@ -46,16 +58,8 @@ public class Matrix {
 
         multiplyby1(n, matrix1);
         System.out.println();
-    }
 
-    private static void initialize(int[][] matrix1) {
-        for (int i = 0; i < matrix1.length; i++) {
-            for (int j = 0; j < matrix1[i].length; j++) {
-                matrix1[i][j] = (int) (Math.random() * 10);
-                System.out.print(matrix1[i][j] + " ");
-            }
-            System.out.println();
-        }
+
     }
 
     private static void multiplication(int[][] matrix1, int[][] matrix2, int[][] matrix4) {
@@ -75,6 +79,15 @@ public class Matrix {
             System.out.println();
         }
     }
+
+    private static void printMatrix2(int i) {
+        System.out.print(" " + i);
+    }
+
+    private static void printMatrix1(int i) {
+        System.out.print(" " + i);
+    }
+
 
     private static void multiplyby1(int n, int[][] matrix1) {
         System.out.println("Matrix умножается на " + n);
@@ -98,14 +111,4 @@ public class Matrix {
             System.out.println();
         }
     }
-/*    Matrix print() {
-        Matrix mx = new Matrix(a, b);
-        int i, j, k = 0;
-        for (i = 0; i < strings; i++) {
-            for (j = 0; j < columns; j++) {
-                array[i][j] = k++;
-            }
-        }
-        return mx;
-    }*/
 }

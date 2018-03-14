@@ -24,8 +24,8 @@ import java.util.Objects;
 public class Tshirt extends Clothes implements MensClothing, WomensClothing {
     private String collarStyle;
 
-    public Tshirt(int clothingSize, double price, String color, String collarStyle) {
-        super(clothingSize, price, color);
+    public Tshirt(Clothing size, double price, String color, String collarStyle) {
+        super(size, price, color);
         this.collarStyle = collarStyle;
     }
 

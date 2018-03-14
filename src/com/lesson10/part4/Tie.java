@@ -24,8 +24,8 @@ import java.util.Objects;
 public class Tie extends Clothes implements MensClothing {
     private double tieLength;
 
-    public Tie(int clothingSize, double price, String color, double tieLength) {
-        super(clothingSize, price, color);
+    public Tie(Clothing size, double price, String color, double tieLength) {
+        super(size, price, color);
         this.tieLength = tieLength;
     }
 

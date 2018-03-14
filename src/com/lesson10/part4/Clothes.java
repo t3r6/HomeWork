@@ -22,22 +22,22 @@ package com.lesson10.part4;
 import java.util.Objects;
 
 public abstract class Clothes {
-    private int clothingSize;
+    private Clothing size;
     private double price;
     private String color;
 
-    public Clothes(int clothingSize, double price, String color) {
-        this.clothingSize = clothingSize;
+    public Clothes(Clothing size, double price, String color) {
+        this.size = size;
         this.price = price;
         this.color = color;
     }
 
-    public int getClothingSize() {
-        return clothingSize;
+    public Clothing getSize() {
+        return size;
     }
 
-    public void setClothingSize(int clothingSize) {
-        this.clothingSize = clothingSize;
+    public void setSize(Clothing size) {
+        this.size = size;
     }
 
     public double getPrice() {
@@ -61,21 +61,20 @@ public abstract class Clothes {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Clothes clothes = (Clothes) o;
-        return clothingSize == clothes.clothingSize &&
-                Double.compare(clothes.price, price) == 0 &&
+        return Double.compare(clothes.price, price) == 0 &&
+                size == clothes.size &&
                 Objects.equals(color, clothes.color);
     }
 
     @Override
     public int hashCode() {
-
-        return Objects.hash(clothingSize, price, color);
+        return Objects.hash(size, price, color);
     }
 
     @Override
     public String toString() {
         return "Clothes{" +
-                "clothingSize=" + clothingSize +
+                "size=" + size +
                 ", price=" + price +
                 ", color='" + color + '\'' +
                 '}';
