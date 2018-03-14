@@ -24,7 +24,7 @@ public class Dressmakers implements MensClothing, WomensClothing {
     public void dressMan(Clothes[] clothes) {
         for (Clothes c : clothes) {
             if (c instanceof MensClothing) {
-                System.out.println(c.getClothingSize());
+                System.out.println(c.getSize());
             }
         }
     }
@@ -33,5 +33,4 @@ public class Dressmakers implements MensClothing, WomensClothing {
     public void dressWoman() {
 
     }
-
 }
