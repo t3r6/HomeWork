@@ -11,24 +11,26 @@ public class Class1 {
     protected int c = 3;
     public int d = 4;
 
+    /*public Class1() {
+    }
+
+    public Class1(int a, int b, int c, int d) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+        this.d = d;
+    }*/
+
     public int getA() {
         return a;
     }
 
-    void print1() {
-        System.out.println(a);
+    public int getB() {
+        return b;
     }
 
-    void print2() {
-        System.out.println(b);
-    }
-
-    void print3() {
-        System.out.println(c);
-    }
-
-    void print4() {
-        System.out.println(d);
+    public int getC() {
+        return c;
     }
 
     public static void main(String[] args) {
@@ -38,10 +40,6 @@ public class Class1 {
         class1.c = 30;
         class1.d = 40;
 
-        class1.print1();
-        class1.print2();
-        class1.print3();
-        class1.print4();
-        System.out.println ("a, b, с, d: " + class1.a + " " + class1.b + " " + class1.c + " " + class1.d);
+        System.out.println("a, b, с, d: " + class1.a + " " + class1.b + " " + class1.c + " " + class1.d);
     }
 }
