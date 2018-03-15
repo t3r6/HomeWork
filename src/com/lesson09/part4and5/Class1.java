@@ -11,16 +11,6 @@ public class Class1 {
     protected int c = 3;
     public int d = 4;
 
-    /*public Class1() {
-    }
-
-    public Class1(int a, int b, int c, int d) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
-        this.d = d;
-    }*/
-
     public int getA() {
         return a;
     }

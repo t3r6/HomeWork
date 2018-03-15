@@ -9,7 +9,7 @@ import com.lesson09.part4and5.Class1;
 
 public class SubClassInPackage extends Class1 {
     public static void main(String[] args) {
-        SubClassInPackage subClassInPackage = (SubClassInPackage) new Class1();
+        SubClassInPackage subClassInPackage = new SubClassInPackage();
         /*subClassInPackage.a = 10; //private
         subClassInPackage.b = 20;*/ //default
         subClassInPackage.c = 30;
