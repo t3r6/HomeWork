@@ -1,5 +1,9 @@
 package com.lesson11;
 
+/**
+ * Заполнение таблицы
+ */
+
 public class part2 {
     public static void main(String[] args) {
         Boolean bool1 = true;
@@ -8,7 +12,7 @@ public class part2 {
         Double double1 = 2.5;
         Float fl1 = 5.85f;
         Integer int1 = 11;
-        Long lg1 = new Long(265); // без конструктора не выводиться
+        Long lg1 = 265L;
         Short short1 = 36;
 
         /*byte b2 = bool1.byteValue();
@@ -19,9 +23,9 @@ public class part2 {
         short s2 = bool1.shortValue();*/
         boolean var2 = Boolean.parseBoolean("122.202");
         /*boolean bool2 = Boolean.parseBoolean("122.202", 1);*/ //no radix
-        /*boolean bool3 = Boolean.parseBoolean("122.202", 2);*/ //no radix
+        /*boolean bool3 = Boolean.valueOf("122.202", 2);*/ //no radix
         String d3 = Boolean.toString(true);
-        String d4 = bool1.toString(true);
+        String d4 = bool1.toString();
         /*String d5 = bool1.toString(true, 1.0);*/ //no radix
         System.out.println("Boolean: " + var2 + " " + d3 + " " + d4);
 
@@ -34,13 +38,13 @@ public class part2 {
         byte var3 = Byte.parseByte("9");
         byte var4 = Byte.parseByte("11", 16);
         Byte byte3 = Byte.valueOf("11", 16);
-        /*String d5 = Byte.toString(10);*/
+        String d5 = Byte.toString((byte) 10);
         String d6 = byte1.toString();
         /*String d7 = byte1.toString(6, 1);*/
         System.out.println("Byte: " + b3 + " " + byte2 + " " + ch3 + " " +
-                i3 + " " + l3 + " " + s3 + " " + var3 + " " + d6 + " " + var4 + " " +byte3);
+                i3 + " " + l3 + " " + s3 + " " + var3 + " " + " " + d5 + " " + d6 + " " + var4 + " " + byte3);
 
-        /*byte b4 = char1.byteValue();
+       /* byte b4 = char1.byteValue();
         double char2 = char1.doubleValue();
         float ch4 = char1.floatValue();
         int i4 = char1.intValue();
@@ -51,7 +55,7 @@ public class part2 {
         ; //no radix
         /*Character char3 = Character.valueOf('H', 1);*/ //no radix
         String d7 = Character.toString('a');
-        String d8 = char1.toString('c');
+        String d8 = char1.toString();
         /*String d9 = char1.toString('s', 1);*/ //no radix
         System.out.println("Character: " + d7 + " " + d8);
 
@@ -79,11 +83,11 @@ public class part2 {
         float var5 = Float.parseFloat("122.202");
         /*float var6 = Float.parseFloat("122.202", 1);*/ //no radix
         /*Float fl3 = Float.valueOf("3.6", 1);*/ //no radix
-        /*String d9 = Float.toString(3.14);*/
+        String d9 = Float.toString(3.14f);
         String d10 = fl1.toString();
         /*String d5 = fl1.toString(3.14, 1);*/ //no radix
         System.out.println("Float: " + b5 + " " + fl2 + " " + ch5 + " " +
-                i5 + " " + l5 + " " + s5 + " " + var5 + " " + d10);
+                i5 + " " + l5 + " " + s5 + " " + var5 + " " + d9 + " " + d10);
 
         byte b6 = int1.byteValue();
         double int2 = int1.doubleValue();
@@ -94,11 +98,11 @@ public class part2 {
         int var6 = Integer.parseInt("122");
         int var7 = Integer.parseInt("11", 16);
         Integer fl3 = Integer.valueOf("11", 16);
-        String d9 = Integer.toString(3);
+        String d91 = Integer.toString(3);
         String d12 = int1.toString();
-        String d5 = int1.toString(3, 1);
+        String d51 = int1.toString(3, 1);
         System.out.println("Integer: " + b6 + " " + int2 + " " + ch6 + " " +
-                i6 + " " + l6 + " " + s6 + " " + var6 + " " + var7 + " " + fl3 + " " + d9 + " " + d12 + " " + d5);
+                i6 + " " + l6 + " " + s6 + " " + var6 + " " + var7 + " " + fl3 + " " + d91 + " " + d12 + " " + d51);
 
         byte b7 = lg1.byteValue();
         double lg2 = lg1.doubleValue();
@@ -123,8 +127,8 @@ public class part2 {
         short s8 = short1.shortValue();
         long var10 = Short.parseShort("122");
         long var11 = Short.parseShort("11", 16);
-        Long short3 = Long.valueOf("11", 16);
-        String d17 = Long.toString(3);
+        Short short3 = Short.valueOf("11", 16);
+        String d17 = Short.toString((short)3);
         String d18 = short1.toString();
         /*String d19 = short1.toString(3, 1);*/
         System.out.println("Short: " + b8 + " " + short2 + " " + ch8 + " " +
