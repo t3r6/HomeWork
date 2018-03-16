@@ -38,7 +38,7 @@ public class Tie extends Clothes implements MensClothing {
     }
 
     @Override
-    public void dressMan(Clothes[]clothes) {
+    public void dressMan() {
 
     }
 

@@ -24,13 +24,17 @@ public class Dressmakers implements MensClothing, WomensClothing {
     public void dressMan(Clothes[] clothes) {
         for (Clothes c : clothes) {
             if (c instanceof MensClothing) {
-                System.out.println(c.getSize());
+                System.out.println(c);
             }
         }
     }
 
     @Override
-    public void dressWoman() {
-
+    public void dressWoman(Clothes[] clothes) {
+        for (Clothes d : clothes) {
+            if (d instanceof WomensClothing) {
+                System.out.println(d);
+            }
+        }
     }
 }

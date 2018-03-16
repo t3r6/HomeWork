@@ -38,7 +38,7 @@ public class Pants extends Clothes implements MensClothing, WomensClothing {
     }
 
     @Override
-    public void dressMan(Clothes[]clothes) {
+    public void dressMan() {
 
     }
 
