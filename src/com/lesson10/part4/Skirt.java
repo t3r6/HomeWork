@@ -53,7 +53,6 @@ public class Skirt extends Clothes implements WomensClothing {
 
     @Override
     public int hashCode() {
-
         return Objects.hash(super.hashCode(), skirtLength);
     }
 
@@ -61,6 +60,6 @@ public class Skirt extends Clothes implements WomensClothing {
     public String toString() {
         return "Skirt{" +
                 "skirtLength=" + skirtLength +
-                '}';
+                "} " + super.toString();
     }
 }

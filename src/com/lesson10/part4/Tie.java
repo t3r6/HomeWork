@@ -53,7 +53,6 @@ public class Tie extends Clothes implements MensClothing {
 
     @Override
     public int hashCode() {
-
         return Objects.hash(super.hashCode(), tieLength);
     }
 
@@ -61,6 +60,6 @@ public class Tie extends Clothes implements MensClothing {
     public String toString() {
         return "Tie{" +
                 "tieLength=" + tieLength +
-                '}';
+                "} " + super.toString();
     }
 }

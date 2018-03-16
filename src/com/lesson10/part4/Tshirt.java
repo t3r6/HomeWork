@@ -58,7 +58,6 @@ public class Tshirt extends Clothes implements MensClothing, WomensClothing {
 
     @Override
     public int hashCode() {
-
         return Objects.hash(super.hashCode(), collarStyle);
     }
 
@@ -66,6 +65,6 @@ public class Tshirt extends Clothes implements MensClothing, WomensClothing {
     public String toString() {
         return "Tshirt{" +
                 "collarStyle='" + collarStyle + '\'' +
-                '}';
+                "} " + super.toString();
     }
 }

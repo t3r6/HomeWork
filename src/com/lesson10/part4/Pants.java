@@ -58,7 +58,6 @@ public class Pants extends Clothes implements MensClothing, WomensClothing {
 
     @Override
     public int hashCode() {
-
         return Objects.hash(super.hashCode(), legLength);
     }
 
@@ -66,6 +65,6 @@ public class Pants extends Clothes implements MensClothing, WomensClothing {
     public String toString() {
         return "Pants{" +
                 "legLength=" + legLength +
-                '}';
+                "} " + super.toString();
     }
 }

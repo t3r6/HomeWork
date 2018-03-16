@@ -37,7 +37,9 @@ public class DressmakersDemo {
         Clothes[]clothes = {tshirt1, tshirt2, tshirt3, pants1, pants2, pants3, skirt1, skirt2, skirt3,
                 tie1, tie2, tie3};
 
-        /*new DressmakersDemo().dressMan(clothes);*/
+        new Dressmakers().dressMan(clothes);
+        System.out.println();
+        new Dressmakers().dressWoman(clothes);
 
     }
 }

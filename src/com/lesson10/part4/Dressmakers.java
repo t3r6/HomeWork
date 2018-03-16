@@ -20,7 +20,6 @@ package com.lesson10.part4;
  */
 
 public class Dressmakers implements MensClothing, WomensClothing {
-    @Override
     public void dressMan(Clothes[] clothes) {
         for (Clothes c : clothes) {
             if (c instanceof MensClothing) {
@@ -29,12 +28,19 @@ public class Dressmakers implements MensClothing, WomensClothing {
         }
     }
 
-    @Override
     public void dressWoman(Clothes[] clothes) {
         for (Clothes d : clothes) {
             if (d instanceof WomensClothing) {
                 System.out.println(d);
             }
         }
+    }
+
+    @Override
+    public void dressMan() {
+    }
+
+    @Override
+    public void dressWoman() {
     }
 }
