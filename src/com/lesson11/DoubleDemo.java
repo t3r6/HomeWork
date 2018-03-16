@@ -20,8 +20,8 @@ public class DoubleDemo {
         Double double7 = 3.0;
 
         //б) Преобразовать значение типа String к типу double. Используем метод Double.parseDouble().
-        String str = "122.202";
-        double var = Double.parseDouble(str);
+       /* String str = "122.202";*/
+        double var = Double.parseDouble("122.202");
 
         //в) Преобразовать объект класса Double ко всем примитивным типам.
         byte b = double6.byteValue();
@@ -32,7 +32,7 @@ public class DoubleDemo {
         double double8 = double6.doubleValue();
 
         //д) Преобразовать литерал типа double к строке: String d = Double.toString(3.14);
-        String d = double4.toString(3.14);
+        String d = Double.toString(3.14);
 
         System.out.println(double1 + " " + double2 + " " + double3 + " " + double4 + " " + double5 +
                 " " + double6 + " " + double7);
