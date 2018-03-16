@@ -4,7 +4,7 @@ package com.lesson05;
  * Распечатать все числа от 1 до 100, которые делятся на 5 без остатка. Используем цикл do-while.(Задание с урока.)
  */
 
-public class Part6 {
+public class Part06 {
     public static void main(String[] args) {
         int i = 1;
         do {

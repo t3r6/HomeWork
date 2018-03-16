@@ -6,7 +6,7 @@ package com.lesson05;
  * Используем конструкцию if-else-if. (Задание с урока.)
  */
 
-public class Part3 {
+public class Part03 {
     public static void main(String[] args) {
         int i = Integer.parseInt(args[0]);
         if (i == 1) {

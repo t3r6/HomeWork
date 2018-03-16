@@ -6,7 +6,7 @@ package com.lesson05;
 
 import java.util.Scanner;
 
-public class Part8Garland {
+public class Part08Garland {
     public static void main(String[] args) {
         int garland = 78;
         Scanner scanner = new Scanner(System.in);

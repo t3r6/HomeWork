@@ -8,7 +8,7 @@ package com.lesson05;
        * Число n задается случайным образом (используйте Math.random()).
  */
 
-public class Part9 {
+public class Part09 {
     public static void main(String[] args) {
         int i, fact = 1;
         double n = (int) getRandomValue(5);

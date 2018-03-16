@@ -4,7 +4,7 @@ package com.lesson05;
  * Переписать задание 3 используя switch. (Задание с урока.)
  */
 
-public class Part4 {
+public class Part04 {
     public static void main(String[] args) {
         int i = Integer.parseInt(args[0]);
         switch (i) {

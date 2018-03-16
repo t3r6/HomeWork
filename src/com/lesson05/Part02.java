@@ -8,7 +8,7 @@ package com.lesson05;
 
 import java.util.Scanner;
 
-public class Part2 {
+public class Part02 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Введите целое число: ");

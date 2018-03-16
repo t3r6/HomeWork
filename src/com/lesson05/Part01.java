@@ -5,7 +5,7 @@ package com.lesson05;
  * Используем оператор if. Используйте метод Integer.parseInt() для преобразования из String в int. (Задание с урока.)
  */
 
-public class Part1 {
+public class Part01 {
     public static void main(String[] args) {
         int i = Integer.parseInt(args[0]);
         if (i % 2 != 0) {
