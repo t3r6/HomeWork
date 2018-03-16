@@ -39,12 +39,12 @@ public class Tshirt extends Clothes implements MensClothing, WomensClothing {
 
     @Override
     public void dressMan() {
-
+        System.out.println("Put on T-shirt");
     }
 
     @Override
     public void dressWoman() {
-
+        System.out.println("Put on T-shirt");
     }
 
     @Override
