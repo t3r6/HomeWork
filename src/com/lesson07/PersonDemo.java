@@ -19,5 +19,6 @@ public class PersonDemo {
         System.out.println();
         person2.talk(person2.fullName);
         person2.move(person2.fullName, person2.age);
+        System.out.println(person2);
     }
 }
