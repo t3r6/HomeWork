@@ -1,4 +1,4 @@
-package com.lesson12.part7;
+package com.lesson12.part07;
 
 /**
  * Создать класс Employee, у которого есть переменные класса - fullname, salary.
@@ -9,18 +9,10 @@ package com.lesson12.part7;
  * и можете добавить что-нибудь свое.
  */
 
-public class EmployeeDemo {
-    public static void main(String[] args) {
-        Employee employee1 = new Employee("Will Smith", "Manager",3300);
-        Employee employee2 = new Employee("Arnold Schwarzenegger", "Consultant",4500);
-        Employee employee3 = new Employee("Jean-Claude Van Damme", "Customer support",2100);
-
-        Employee[] employees = new Employee[]{employee1, employee2, employee3};
-
+public class Report {
+    public static void generateReport(Employee[] employees) {
         for (Employee e : employees) {
-            System.out.println(e);
+            System.out.printf("Employee %-25s gets %10.2f per month.\n", e.getFullName(), e.getSalary());
         }
-
-        Report.generateReport(employees);
     }
 }

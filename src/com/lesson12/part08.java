@@ -7,20 +7,17 @@ package com.lesson12;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class part8 {
+public class part08 {
     public static void main(String[] args) {
         Pattern pattern = Pattern.compile("c*a*b");
         Matcher matcher = pattern.matcher("aaab");
         Matcher matcher1 = pattern.matcher("cab");
         Matcher matcher2 = pattern.matcher("ccab");
         Matcher matcher3 = pattern.matcher("cccb");
-        boolean a = matcher.matches();
-        boolean b = matcher1.matches();
-        boolean c = matcher2.matches();
-        boolean d = matcher3.matches();
-        System.out.println(a);
-        System.out.println(b);
-        System.out.println(c);
-        System.out.println(d);
+
+        Matcher[] matchers = new Matcher[]{matcher, matcher1, matcher, matcher3};
+        for (Matcher m : matchers) {
+            System.out.println(m.matches());
+        }
     }
 }

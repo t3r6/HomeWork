@@ -12,7 +12,7 @@ package com.lesson12;
  * и) Вырезать строку Java c помощью метода String.substring. (Задание с урока).
  */
 
-public class part1 {
+public class part01 {
     public static void main(String[] args) {
         lastChar("I like Java!!!");
         verifyString("I like Java!!!");

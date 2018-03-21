@@ -10,7 +10,7 @@ package com.lesson12;
  * в) Замените символ “=” на слово “равно”. Используйте методы StringBuilder.replace(). (Задание с урока).
  */
 
-public class part2 {
+public class part02 {
     public static void main(String[] args) {
         calculate(3, 56);
         calculate1(4, 57);

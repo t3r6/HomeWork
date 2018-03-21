@@ -1,4 +1,4 @@
-package com.lesson12.part7;
+package com.lesson12.part07;
 
 import java.util.Objects;
 
