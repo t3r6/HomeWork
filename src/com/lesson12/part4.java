@@ -6,4 +6,17 @@ package com.lesson12;
  */
 
 public class part4 {
+    public static void main(String[] args) {
+        String[] str = {"string", "code", "Practice"};
+
+        for (String string : str) {
+            System.out.println(getMiddleLetters(string));
+        }
+    }
+
+    public static String getMiddleLetters(String s) {
+        return s.substring((s.length() / 2) - 1, (s.length() / 2) + 1);
+    }
+
+
 }
