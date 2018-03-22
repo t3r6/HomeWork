@@ -5,7 +5,7 @@ package com.lesson12;
  * (не учитываем регистр символов) на «OOP».
  */
 
-public class part03 {
+public class Part03 {
     public static void main(String[] args) {
         String s = "object oriented programming is difficult";
         Replacement(s);

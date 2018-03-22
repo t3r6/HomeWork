@@ -4,7 +4,7 @@ package com.lesson11;
  * Заполнение таблицы
  */
 
-public class part2 {
+public class Part2 {
     public static void main(String[] args) {
         Boolean bool1 = true;
         Byte byte1 = 8;

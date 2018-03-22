@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
  * Найти все подстроки "Java X" и распечатать их. (Задание с урока).
  */
 
-public class part10 {
+public class Part10 {
     public static void main(String[] args) {
         String regex = "(Java\\s*\\d)";
         String s = "Versions: Java  5, Java 6, Java   7, Java 8.";

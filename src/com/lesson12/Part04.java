@@ -5,7 +5,7 @@ package com.lesson12;
  * необходимо вернуть ее два средних знака: "string" → "ri", "code" → "od", "Practice"→"ct".
  */
 
-public class part04 {
+public class Part04 {
     public static void main(String[] args) {
         String[] str = {"string", "code", "Practice"};
 

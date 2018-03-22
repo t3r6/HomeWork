@@ -9,7 +9,7 @@ import java.util.Formatter;
  * Выделить под фамилию 15 символов, под оценку 3 символа, предмет – 10. (Задание с урока).
  */
 
-public class part05 {
+public class Part05 {
     public static void main(String[] args) {
         printString("Петров", 5, "физике");
         printString1("Иванов", 3, "математике");

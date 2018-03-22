@@ -7,7 +7,7 @@ package com.lesson12;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class part08 {
+public class Part08 {
     public static void main(String[] args) {
         Pattern pattern = Pattern.compile("c*a*b");
         Matcher matcher = pattern.matcher("aaab");
