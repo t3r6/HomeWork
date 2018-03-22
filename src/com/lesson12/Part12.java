@@ -16,7 +16,7 @@ public class Part12 {
     }
 
     private static void countLatin(String str) {
-        String stringPattern = "[a-zA-z]+";
+        String stringPattern = "[a-zA-Z]+";
         Pattern pattern = Pattern.compile(stringPattern);
         Matcher matcher = pattern.matcher(str);
         int i = 0;
