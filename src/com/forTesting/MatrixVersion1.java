@@ -23,9 +23,6 @@ public class MatrixVersion1 {
         int[][] matrix3 = new int[a][b];
         int[][] matrix4 = new int[a][];
 
-       /* MatrixVersion1 matrix2 = new MatrixVersion1(5, 5);  // Почему не работает конструктор?
-        MatrixVersion1 matrix3 = new MatrixVersion1(5, 5);*/
-
         for (int i = 0; i < matrix4.length; i++) matrix4[i] = new int[c];
 
         System.out.println("Matrix");
@@ -37,7 +34,6 @@ public class MatrixVersion1 {
             }
             System.out.println();
         }
-
         System.out.println();
 
         System.out.println("Matrix2");
@@ -58,8 +54,6 @@ public class MatrixVersion1 {
 
         multiplyby1(n, matrix1);
         System.out.println();
-
-
     }
 
     private static void multiplication(int[][] matrix1, int[][] matrix2, int[][] matrix4) {
@@ -87,7 +81,6 @@ public class MatrixVersion1 {
     private static void printMatrix1(int i) {
         System.out.print(" " + i);
     }
-
 
     private static void multiplyby1(int n, int[][] matrix1) {
         System.out.println("Matrix умножается на " + n);
