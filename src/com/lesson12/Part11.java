@@ -24,8 +24,8 @@ public class Part11 {
             ch1 = 0;
             s.setLength(0);
             for (int i = 0; i < str.length() - 1; i++) {
-                if (s.indexOf(word.charAt(i).toString()) == -1) {
-                    s.append(string);
+                if (s.indexOf(String.valueOf(word.charAt(i))) == -1) {
+                    s.append(word.charAt(i));
                     ch1++;
                 }
             }
