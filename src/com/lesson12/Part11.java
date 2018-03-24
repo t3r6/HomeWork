@@ -17,25 +17,23 @@ public class Part11 {
     }
 
     private static void minChars(String str) {
-        String[] min = str.split(" ");
+        String min = null;
         StringBuilder s = new StringBuilder();
-        String text;
         int ch1, ch2 = str.length();
         for (String word : str.split(" ")) {
             ch1 = 0;
             s.setLength(0);
-            for (String string : word.split("")) {
-                text = String.valueOf(string);
-                if (s.indexOf(text) == -1) {
-                    s.append(text);
+            for (int i = 0; i < str.length() - 1; i++) {
+                if (s.indexOf(word.charAt(i).toString()) == -1) {
+                    s.append(string);
                     ch1++;
                 }
             }
             if (ch1 < ch2) {
                 ch2 = ch1;
-                min[0] = word;
+                min = word;
             }
         }
-        System.out.println(min[0]);
+        System.out.println(min);
     }
 }
