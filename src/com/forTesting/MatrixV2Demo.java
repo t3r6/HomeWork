@@ -22,10 +22,11 @@ public class MatrixV2Demo {
         MatrixV2 matrix_1 = new MatrixV2(matrix1);
         MatrixV2 matrix_2 = new MatrixV2(matrix2);
 
-        MatrixV2 m1 = matrix_1.initialize(matrix_1);
         System.out.println("Matrix1" + matrix_1);
-        MatrixV2 m2 = matrix_2.initialize(matrix_2);
+        MatrixV2 m1 = matrix_1.initialize(matrix_1);
+        System.out.println();
         System.out.println("Matrix2" + matrix_2);
+        MatrixV2 m2 = matrix_2.initialize(matrix_2);
        /* MatrixV2 multiplication = m2.multiplication(m1);
         System.out.println(multiplication);*/
         MatrixV2 additionResult = m1.addition(m2);

@@ -83,4 +83,9 @@ public class MatrixV2 {
         MatrixV2 m = new MatrixV2(array);
         return m;
     }
+
+    @Override
+    public String toString() {
+        return "";
+    }
 }
