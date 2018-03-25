@@ -1,5 +1,6 @@
 package com.lesson12.part07;
 
+import java.util.Date;
 import java.util.Objects;
 
 /**
@@ -15,14 +16,16 @@ public class Employee {
     private String fullName;
     private String position;
     private double salary;
+    private Date salaryDate;
 
     public Employee() {
     }
 
-    public Employee(String fullName, String position, double salary) {
+    public Employee(String fullName, String position, double salary, Date salaryDate) {
         this.fullName = fullName;
         this.position = position;
         this.salary = salary;
+        this.salaryDate = salaryDate;
     }
 
     public String getFullName() {
@@ -49,6 +52,14 @@ public class Employee {
         this.salary = salary;
     }
 
+    public Date getSalaryDate() {
+        return salaryDate;
+    }
+
+    public void setSalaryDate(Date salaryDate) {
+        this.salaryDate = salaryDate;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -56,14 +67,16 @@ public class Employee {
         Employee employee = (Employee) o;
         return Double.compare(employee.salary, salary) == 0 &&
                 Objects.equals(fullName, employee.fullName) &&
-                Objects.equals(position, employee.position);
+                Objects.equals(position, employee.position) &&
+                Objects.equals(salaryDate, employee.salaryDate);
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(fullName, position, salary);
+        return Objects.hash(fullName, position, salary, salaryDate);
     }
+
 
     @Override
     public String toString() {
