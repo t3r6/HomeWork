@@ -27,7 +27,7 @@ public class FullReport {
 
         Employee[] employees = new Employee[]{employee1, employee2, employee3};
 
-        Locale us = new Locale("en", "US");
+        Locale us = Locale.US;
         generateReport(employees, us);
 
         Locale current = Locale.getDefault();
@@ -35,19 +35,6 @@ public class FullReport {
 
         Locale ua = new Locale("uk", "UA");
         generateReport(employees, ua);
-
-        System.out.println();
-        for (Employee e : employees) {
-            System.out.println(e);
-        }
-
-        FullReport.generateReport(employees);
-    }
-
-    public static void generateReport(Employee[] employees) {
-        for (Employee e : employees) {
-            System.out.printf("Employee %-25s gets %10.2f per month.\n", e.getFullName(), e.getSalary());
-        }
     }
 
     public static void generateReport(Employee[] employees, Locale current)
