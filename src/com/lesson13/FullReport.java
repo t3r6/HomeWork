@@ -45,10 +45,10 @@ public class FullReport {
         System.out.println(s1);
 
         DateFormat df = DateFormat.getDateInstance(DateFormat.SHORT);
-        NumberFormat nm = NumberFormat.getCurrencyInstance(current);
+        NumberFormat nf = NumberFormat.getCurrencyInstance(current);
         for (Employee employee : employees) {
             System.out.printf("%S получает %s в дату %s%n",
-                    employee.getFullName(), nm.format(employee.getSalary()),
+                    employee.getFullName(), nf.format(employee.getSalary()),
                     df.format(employee.getSalaryDate()));
         }
     }
