@@ -41,12 +41,12 @@ public class User2 {
 
 
     public static void main(String[] args) {
-        User user1 = new User("Andy", "password");
-        User user2 = new User("John", "qwerty");
+        User2 user1 = new User2("Andy", "password");
+        User2 user2 = new User2("John", "qwerty");
         user1.createQuery();
-        User.Query query1 = user1.new Query();
+        User2.Query query1 = user1.new Query();
         query1.printToLog();
-        User.Query query2 = new User("Ben", "111").new Query();
+        User2.Query query2 = new User2("Ben", "111").new Query();
         query2.printToLog();
     }
 }
