@@ -1,4 +1,4 @@
-package com.lesson14;
+package com.lesson14.part5;
 
 /**
  * Создать интерфейс Cookable, содержащий метод void cook().
@@ -8,4 +8,8 @@ package com.lesson14;
  */
 
 public class Food {
+    public void prepare(Cookable c) {
+        c.cook();
+    }
 }
+
