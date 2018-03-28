@@ -51,9 +51,12 @@ public class User {
         User user1 = new User("Andy", "password");
         User user2 = new User("John", "qwerty");
         user1.createQuery();
+        user2.createQuery();
         User.Query query1 = user1.new Query();
         query1.printToLog();
         User.Query query2 = new User("Ben", "111").new Query();
         query2.printToLog();
+        User.Query query3 = user2.new Query();
+        query3.printToLog();
     }
 }

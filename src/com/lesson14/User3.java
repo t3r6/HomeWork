@@ -15,23 +15,12 @@ public class User3 {
     public User3() {
     }
 
-    public static class Query {
-        public void printToLog() {
-            System.out.printf("User %s with password %s has send a query.\n", login, password);
-        }
-    }
-
     public static String getLogin() {
         return login;
     }
 
     public static String getPassword() {
         return password;
-    }
-
-    public void createQuery() {
-        Query query = new Query();
-        query.printToLog();
     }
 
     @Override
@@ -47,6 +36,12 @@ public class User3 {
                 "login='" + login + '\'' +
                 ", password='" + password + '\'' +
                 '}';
+    }
+
+    static class Query {
+        public void printToLog() {
+            System.out.printf("User %s with password %s has send a query.\n", login, password);
+        }
     }
 
     public static void main(String[] args) {

@@ -24,10 +24,8 @@ public class MatrixDemo {
 
         System.out.println("Matrix1" + matrix_1);
         Matrix m1 = matrix_1.initialize();
-        System.out.println();
         System.out.println("Matrix2" + matrix_2);
         Matrix m2 = matrix_2.initialize();
-        System.out.println();
         m1.multiplication(m2, matrix3);
         Matrix additionResult = m1.addition(m2);
         System.out.println(additionResult);
