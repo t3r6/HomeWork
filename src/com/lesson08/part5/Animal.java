@@ -23,6 +23,9 @@ public class Animal {
         this.location = location;
     }
 
+    public Animal() {
+    }
+
     public String getName() {
         return name;
     }
