@@ -12,9 +12,10 @@ package com.lesson08.part5;
  * В цикле отправляйте их на прием к ветеринару.
  */
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Animal {
+public class Animal  implements Serializable {
     private String name, food, location;
 
     public Animal(String name, String food, String location) {

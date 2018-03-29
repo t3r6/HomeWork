@@ -1,7 +1,6 @@
 package com.lesson15;
 
 import com.lesson08.part5.Animal;
-import com.lesson13.Toy;
 
 import java.io.Serializable;
 import java.util.Objects;
