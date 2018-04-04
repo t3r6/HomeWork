@@ -36,8 +36,8 @@ public class Part4 {
 
     public static void union(Set<?>... set) {
         TreeSet<?> result = new TreeSet<>();
-        for (Set<?> s : set) {
-            result.addAll((Collection) s);
+        for (Set s : set) {
+            result.addAll(s);
         }
         System.out.println(result);
         ;
