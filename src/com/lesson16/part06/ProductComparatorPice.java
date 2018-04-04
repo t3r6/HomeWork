@@ -1,4 +1,4 @@
-package com.lesson16.part6;
+package com.lesson16.part06;
 
 import java.util.Comparator;
 
@@ -10,9 +10,14 @@ import java.util.Comparator;
  * Используем классы компараторы для каждого вида сортировки.
  */
 
-public class ProductComparatorName implements Comparator<Product> {
+public class ProductComparatorPice implements Comparator<Product> {
     @Override
     public int compare(Product o1, Product o2) {
-        return o1.getName().compareTo(o2.getName());
+        if (o1.getPrice() > o2.getPrice()) {
+            return 1;
+        } else if (o1.getPrice() < o2.getPrice()) {
+            return -1;
+        }
+        return 0;
     }
 }

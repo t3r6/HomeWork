@@ -79,7 +79,7 @@ public class Part1<T extends Comparable, V extends Animal & Serializable, K exte
 
     @Override
     public String toString() {
-        return "Part1{" +
+        return "Part01{" +
                 "ob1=" + ob1 +
                 ", ob2=" + ob2 +
                 ", ob3=" + ob3 +

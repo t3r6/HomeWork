@@ -13,7 +13,7 @@ import java.util.List;
  * е) Удалить все ящики. (Задание с урока)
  */
 
-public class Part1 {
+public class Part01 {
     public static void main(String[] args) {
         List<HeavyBox1> list = new ArrayList<>();
         list.add(new HeavyBox1(2, 2, 2, 2));

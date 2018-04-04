@@ -10,7 +10,7 @@ import java.util.TreeSet;
  * Протестируйте работу этих методов на предварительно заполненных множествах.
  */
 
-public class Part4 {
+public class Part04 {
     public static void main(String[] args) {
         Set<HeavyBox1> boxes1 = new TreeSet<>();
         Set<HeavyBox1> boxes2 = new TreeSet<>();

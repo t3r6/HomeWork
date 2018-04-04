@@ -10,7 +10,7 @@ import java.util.List;
  * Если вес коробки больше 300 гр, коробка перемещается в другую коллекцию. (Задание с урока)
  */
 
-public class Part8 {
+public class Part08 {
     public static void main(String[] args) {
         List<HeavyBox1>list = new ArrayList<>();
         list.add(new HeavyBox1());

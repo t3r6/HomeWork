@@ -1,4 +1,4 @@
-package com.lesson16.part6;
+package com.lesson16.part06;
 
 import java.util.Comparator;
 import java.util.Set;

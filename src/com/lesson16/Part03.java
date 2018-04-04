@@ -8,7 +8,7 @@ import java.util.TreeSet;
  * Распечатать содержимое с помощью for each. (Задание с урока)
  */
 
-public class Part3 {
+public class Part03 {
     public static void main(String[] args) {
         SortedSet<HeavyBox1> set = new TreeSet<>();
         set.add(new HeavyBox1(2,2,2,2));

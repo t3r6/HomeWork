@@ -8,7 +8,7 @@ import java.util.List;
  * Получить массив содержащий ящики из коллекции тремя способами и вывести на консоль.
  */
 
-public class Part2 {
+public class Part02 {
     public static void main(String[] args) {
         List<HeavyBox1> list = new ArrayList<>();
         list.add(new HeavyBox1(1, 1, 1, 1));

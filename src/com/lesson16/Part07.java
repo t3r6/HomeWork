@@ -9,7 +9,7 @@ import java.util.Deque;
  * Удалить объекты методом poll().  (Задание с урока)
  */
 
-public class Part7 {
+public class Part07 {
     public static void main(String[] args) {
         Deque<HeavyBox1> queue = new ArrayDeque<>();
         HeavyBox1 box = new HeavyBox1(2, 2, 2, 2);

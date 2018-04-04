@@ -1,7 +1,6 @@
-package com.lesson16.part6;
+package com.lesson16.part06;
 
 import java.util.Objects;
-import java.util.Set;
 import java.util.SortedSet;
 
 /**
