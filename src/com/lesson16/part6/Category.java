@@ -2,6 +2,7 @@ package com.lesson16.part6;
 
 import java.util.Objects;
 import java.util.Set;
+import java.util.SortedSet;
 
 /**
  * Создать класс Товар, имеющий переменные имя, цена, рейтинг.
@@ -13,9 +14,9 @@ import java.util.Set;
 
 public class Category {
     private String name;
-    private Set<Product> products;
+    private SortedSet<Product> products;
 
-    public Category(String name, Set<Product> products) {
+    public Category(String name, SortedSet<Product> products) {
         this.name = name;
         this.products = products;
     }
@@ -31,11 +32,11 @@ public class Category {
         this.name = name;
     }
 
-    public Set<Product> getProducts() {
+    public SortedSet<Product> getProducts() {
         return products;
     }
 
-    public void setProducts(Set<Product> products) {
+    public void setProducts(SortedSet<Product> products) {
         this.products = products;
     }
 

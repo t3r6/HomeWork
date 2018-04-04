@@ -2,6 +2,7 @@ package com.lesson16.part6;
 
 import java.util.Comparator;
 import java.util.Set;
+import java.util.SortedSet;
 import java.util.TreeSet;
 
 /**
@@ -14,7 +15,7 @@ import java.util.TreeSet;
 
 public class Shop {
     public static void main(String[] args) {
-        Set<Product> products1 = new TreeSet<>();
+        SortedSet<Product> products1 = new TreeSet<>();
         products1.add(new Product("Dress", 1002.4, 4));
         products1.add(new Product("Jeans", 700.4, 5));
         products1.add(new Product("Shirt", 500.57, 3));
@@ -24,18 +25,18 @@ public class Shop {
         Category category = new Category("Clothes", products1);
 
 
-        Set<Product> products2 = new TreeSet<>(new ProductComparatorName());
+        /*Set<Product> products2 = new TreeSet<>(new ProductComparatorName());
         products2.addAll(products1);
         Set<Product> products3 = new TreeSet<>(new ProductComparatorPice());
         products3.addAll(products1);
 
         print(products1);
         print(products2);
-        print(products3);
+        print(products3);*/
 
         print(category, new ProductComparatorPice());
         print(category, new ProductComparatorName());
-        /*print(category, category.getProducts().comparator());*/
+        print(category, category.getProducts().comparator());
     }
 
     public static void print(Set<Product> products) {
@@ -44,6 +45,7 @@ public class Shop {
         }
         System.out.println();
     }
+
     public static void print(Category category, Comparator<? super Product>comparator){
         Set<Product>set = new TreeSet<>(comparator);
         set.addAll(category.getProducts());
