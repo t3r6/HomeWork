@@ -1,19 +1,12 @@
 package com.lesson16.part09;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
- * Создайте HashMap, содержащий пары значений  - имя игрушки и объект игрушки (класс Toy).
- * Перебрать и распечатать пары значений - entrySet().
- * Перебрать и распечатать набор из имен игрушек  - keySet().
- * Перебрать и распечатать значения игрушек - values().
- * Для каждого перебора создать свой метод. (Задание с урока)
+ * Переделать задание, используя TreeMap
  */
 
-public class HashMapDemo {
+public class TreeMapDemo {
     public static void main(String[] args) {
         Map<String, Toy>map = new HashMap<>();
         map.put("Doll", new Toy("Doll", 100));
@@ -21,9 +14,11 @@ public class HashMapDemo {
         map.put("Car", new Toy("Car", 500));
         map.put("Peg-top", new Toy("Peg-top", 200));
 
-        iterateByEntry(map);
-        iterateByKey(map);
-        iterateByValue(map);
+        SortedMap<String, Toy>sortedMap = new TreeMap<>(map);
+
+        iterateByEntry(sortedMap);
+        iterateByKey(sortedMap);
+        iterateByValue(sortedMap);
     }
 
     public static void iterateByEntry(Map<String, Toy>map){
