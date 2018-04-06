@@ -10,7 +10,7 @@ import java.util.Comparator;
  * Используем классы компараторы для каждого вида сортировки.
  */
 
-public class ProductComparatorPice implements Comparator<Product> {
+public class ProductComparatorPrice implements Comparator<Product> {
     @Override
     public int compare(Product o1, Product o2) {
         if (o1.getPrice() > o2.getPrice()) {
