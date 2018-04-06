@@ -1,5 +1,6 @@
 package com.lesson16.part06;
 
+import java.util.Collection;
 import java.util.Objects;
 import java.util.SortedSet;
 
@@ -13,9 +14,9 @@ import java.util.SortedSet;
 
 public class Category {
     private String name;
-    private SortedSet<Product> products;
+    private Collection<Product> products;
 
-    public Category(String name, SortedSet<Product> products) {
+    public Category(String name, Collection<Product> products) {
         this.name = name;
         this.products = products;
     }
@@ -31,11 +32,11 @@ public class Category {
         this.name = name;
     }
 
-    public SortedSet<Product> getProducts() {
+    public Collection<Product> getProducts() {
         return products;
     }
 
-    public void setProducts(SortedSet<Product> products) {
+    public void setProducts(Collection<Product> products) {
         this.products = products;
     }
 

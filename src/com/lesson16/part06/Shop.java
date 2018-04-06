@@ -36,7 +36,8 @@ public class Shop {
 
         print(category, new ProductComparatorPrice());
         print(category, new ProductComparatorName());
-        print(category, category.getProducts().comparator());
+        print(category, ((TreeSet)category.getProducts()).comparator());
+        /*print(category, category.getProducts().comparator());*/
     }
 
     public static void print(Set<Product> products) {

@@ -18,7 +18,7 @@ public class ShopCollections {
         products1.add(new Product("Pants", 600.57, 5));
         products1.add(new Product("Tie", 200.57, 4));
 
-        /*Category category = new Category("Clothes", products1);*/
+        Category category = new Category("Clothes", products1);
 
         Collections.sort(products1);
         System.out.println("Sorting by rating: ");
