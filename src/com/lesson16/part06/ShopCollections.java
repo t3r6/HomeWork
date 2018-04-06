@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Переделать задание 4 (класс Товар),  используя Collections.sort() для сортировки.
+ * Переделать задание (класс Товар),  используя Collections.sort() для сортировки.
  * Добавить возможность сортировать в обратном порядке (Collections.reverse()).
  */
 
