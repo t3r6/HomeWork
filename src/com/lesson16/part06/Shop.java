@@ -27,14 +27,14 @@ public class Shop {
 
         /*Set<Product> products2 = new TreeSet<>(new ProductComparatorName());
         products2.addAll(products1);
-        Set<Product> products3 = new TreeSet<>(new ProductComparatorPice());
+        Set<Product> products3 = new TreeSet<>(new ProductComparatorPrice());
         products3.addAll(products1);
 
         print(products1);
         print(products2);
         print(products3);*/
 
-        print(category, new ProductComparatorPice());
+        print(category, new ProductComparatorPrice());
         print(category, new ProductComparatorName());
         print(category, category.getProducts().comparator());
     }
