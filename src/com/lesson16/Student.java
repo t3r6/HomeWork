@@ -81,13 +81,12 @@ public class Student {
                 '}';
     }
 
-
     public static void printStudents(List<Student> students, int course) {
         Iterator<Student> studentIterator = students.iterator();
         while (studentIterator.hasNext()) {
             Student s = studentIterator.next();
             if (s.getCourse() == course) {
-                System.out.println(s.getName());
+                System.out.println(s.getName() + " course: " + s.getCourse());
             }
         }
     }
