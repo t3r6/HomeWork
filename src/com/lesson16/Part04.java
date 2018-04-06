@@ -1,6 +1,7 @@
 package com.lesson16;
 
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -35,12 +36,13 @@ public class Part04 {
     }
 
     public static void union(Set<?>... set) {
-        TreeSet<?> result = new TreeSet<>();
+        HashSet<?> result = new HashSet<>();
+        /*TreeSet<?> result = new TreeSet<>();*/ // нет пересекающихся множеств
         for (Set s : set) {
             result.addAll(s);
         }
-        System.out.println(result);
-        ;
+        result.forEach(System.out :: println);
+        System.out.println();
     }
 
     public static void intersect(Set<?>... set) {
