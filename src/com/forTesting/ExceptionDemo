@@ -1,0 +1,26 @@
+public class ExceptionDemo {
+    String login;
+    String password;
+    String confirmPassword;
+
+    public static void main(String[] args) {
+        try {
+            System.out.println(authenticate("111", "111", "111"));
+        } catch (WrongLoginException e) {
+            e.printStackTrace();
+        } catch (WrongPasswordException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static boolean authenticate(String login, String password, String confirmPassword)
+            throws WrongLoginException, WrongPasswordException {
+        if (login.length() > 20) {
+            throw new WrongLoginException("Login more than 20");
+        }
+        if (login.length() > 20 || !password.equals(confirmPassword)) {
+            throw new WrongPasswordException("Password is not correct");
+        }
+        return true;
+    }
+}
