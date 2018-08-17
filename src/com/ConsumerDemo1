@@ -1,0 +1,12 @@
+package homework;
+
+import oop.HeavyBox1;
+
+import java.util.function.Consumer;
+
+public class ConsumerDemo1 {
+    public static void main(String[] args) {
+        Consumer<HeavyBox1> consumer1 = (HeavyBox1 box) -> System.out.println("Отгрузили ящик с весом " + box.weight);
+        consumer1.accept(new HeavyBox1(1,1,1,1));
+    }
+}
