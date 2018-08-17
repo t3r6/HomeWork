@@ -7,6 +7,8 @@ import java.util.function.Consumer;
 public class ConsumerDemo1 {
     public static void main(String[] args) {
         Consumer<HeavyBox1> consumer1 = (HeavyBox1 box) -> System.out.println("Отгрузили ящик с весом " + box.weight);
+        Consumer<HeavyBox1> consumer2 = (HeavyBox1 box) -> System.out.println("Отправляем ящик с весом " + box.weight);
         consumer1.accept(new HeavyBox1(1,1,1,1));
+        consumer1.andThen(consumer2).accept(new HeavyBox1(2,2,2,2));
     }
 }
