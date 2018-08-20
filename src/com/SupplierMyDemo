@@ -1,0 +1,10 @@
+package homework;
+
+import java.util.function.Supplier;
+
+public class SupplierMyDemo {
+    public static void main(String[] args) {
+        Supplier<Double> supplierInt = () -> Math.random()*10;
+        System.out.println(supplierInt.get());
+    }
+}
