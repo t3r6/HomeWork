@@ -1,0 +1,10 @@
+package homework;
+
+import java.util.function.UnaryOperator;
+
+public class MethodReferences2 {
+    public static void main(String[] args) {
+        UnaryOperator<String> newString = String::new;
+        System.out.println(newString.apply("str"));
+    }
+}
